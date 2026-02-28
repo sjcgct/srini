@@ -3,7 +3,7 @@ import Canvas from "../Generic/Canvas";
 const AbcChannel = () => {
   return (
     <Canvas bgcolor="white">
-      <Heading title={"ABC Channel"} />
+      <Heading title={"SJC Channel"} />
       <div className="flex md:gap-y-8 md:my-4 p-6">
         <iframe
           className="aspect-video w-full h-auto"

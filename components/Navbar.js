@@ -180,7 +180,7 @@ function Nav() {
               {/* Dark mode logo */}
               <img
                 className="h-10 w-10 hidden dark:block"
-                src="/images/sjc_white.png"
+                src="/images/sjc_white.svg"
                 alt="SJC Logo"
               />
             </a>
@@ -188,7 +188,7 @@ function Nav() {
 
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="p-2 rounded-full bg-gray-200 hover:bg-gray-300 transition-colors duration-200"
+            className="p-2 rounded-full bg-gray-200 dark:text-white dark:bg-grey-800 hover:bg-gray-300 dark:hover:bg-grey-700 transition-colors duration-200"
           >
             {!isOpen ? "☰" : "✕"}
           </button>

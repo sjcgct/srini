@@ -75,7 +75,7 @@ export default function Story({ page, disclaimer, otherStories }) {
             Written by
           </span>
           <Link href={`/author/${page.data.author.uid}`} passHref>
-            <a className="title text-xl md:text-2xl text-base transition-colors hover:text-[#1c2e4a] hover:underline mt-1">
+            <a className="title text-xl md:text-2xl text-base transition-colors dark:hover:text-[#FDE7C9] hover:text-[#1c2e4a] hover:underline mt-1">
               {page.data.author.data.name}
             </a>
           </Link>
