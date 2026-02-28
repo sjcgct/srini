@@ -1,0 +1,594 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* playfair-display-regular - latin */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/fonts/playfair-display-v30-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/playfair-display-v30-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */
+      url("../public/fonts/playfair-display-v30-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/playfair-display-v30-latin-regular.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../public/fonts/playfair-display-v30-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/playfair-display-v30-latin-regular.svg#PlayfairDisplay")
+      format("svg"); /* Legacy iOS */
+}
+html {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+/* playfair-display-700 - latin */
+@font-face {
+  font-family: "Playfair Display";
+  font-style: bold;
+  font-weight: 700;
+  src: url("../public/fonts/playfair-display-v30-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/playfair-display-v30-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/playfair-display-v30-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/playfair-display-v30-latin-700.woff") format("woff"),
+    /* Modern Browsers */
+      url("../public/fonts/playfair-display-v30-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/playfair-display-v30-latin-700.svg#PlayfairDisplay")
+      format("svg"); /* Legacy iOS */
+}
+/* lato-regular - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/fonts/lato-v23-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/lato-v23-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/lato-v23-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/lato-v23-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("../public/fonts/lato-v23-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/lato-v23-latin-regular.svg#Lato") format("svg"); /* Legacy iOS */
+}
+/* lato-italic - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../public/fonts/lato-v23-latin-italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/lato-v23-latin-italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/lato-v23-latin-italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/lato-v23-latin-italic.woff") format("woff"),
+    /* Modern Browsers */ url("../public/fonts/lato-v23-latin-italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/lato-v23-latin-italic.svg#Lato") format("svg"); /* Legacy iOS */
+}
+/* lato-700 - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../public/fonts/lato-v23-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/lato-v23-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/lato-v23-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("../public/fonts/lato-v23-latin-700.woff")
+      format("woff"),
+    /* Modern Browsers */ url("../public/fonts/lato-v23-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/lato-v23-latin-700.svg#Lato") format("svg"); /* Legacy iOS */
+}
+/* lato-700italic - latin */
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../public/fonts/lato-v23-latin-700italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/lato-v23-latin-700italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/lato-v23-latin-700italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/lato-v23-latin-700italic.woff") format("woff"),
+    /* Modern Browsers */ url("../public/fonts/lato-v23-latin-700italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/lato-v23-latin-700italic.svg#Lato") format("svg"); /* Legacy iOS */
+}
+/* merriweather-300 - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../public/fonts/merriweather-v30-latin-300.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/merriweather-v30-latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/merriweather-v30-latin-300.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/merriweather-v30-latin-300.woff") format("woff"),
+    /* Modern Browsers */ url("../public/fonts/merriweather-v30-latin-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/merriweather-v30-latin-300.svg#Merriweather")
+      format("svg"); /* Legacy iOS */
+}
+/* merriweather-regular - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../public/fonts/merriweather-v30-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/merriweather-v30-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/merriweather-v30-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/merriweather-v30-latin-regular.woff") format("woff"),
+    /* Modern Browsers */
+      url("../public/fonts/merriweather-v30-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/merriweather-v30-latin-regular.svg#Merriweather")
+      format("svg"); /* Legacy iOS */
+}
+/* merriweather-italic - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 400;
+  src: url("../public/fonts/merriweather-v30-latin-italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/merriweather-v30-latin-italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/merriweather-v30-latin-italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/merriweather-v30-latin-italic.woff") format("woff"),
+    /* Modern Browsers */
+      url("../public/fonts/merriweather-v30-latin-italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/merriweather-v30-latin-italic.svg#Merriweather")
+      format("svg"); /* Legacy iOS */
+}
+/* merriweather-700italic - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: italic;
+  font-weight: 700;
+  src: url("../public/fonts/merriweather-v30-latin-700italic.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/merriweather-v30-latin-700italic.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/merriweather-v30-latin-700italic.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/merriweather-v30-latin-700italic.woff")
+      format("woff"),
+    /* Modern Browsers */
+      url("../public/fonts/merriweather-v30-latin-700italic.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/merriweather-v30-latin-700italic.svg#Merriweather")
+      format("svg"); /* Legacy iOS */
+}
+/* merriweather-700 - latin */
+@font-face {
+  font-family: "Merriweather";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../public/fonts/merriweather-v30-latin-700.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("../public/fonts/merriweather-v30-latin-700.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("../public/fonts/merriweather-v30-latin-700.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("../public/fonts/merriweather-v30-latin-700.woff") format("woff"),
+    /* Modern Browsers */ url("../public/fonts/merriweather-v30-latin-700.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("../public/fonts/merriweather-v30-latin-700.svg#Merriweather")
+      format("svg"); /* Legacy iOS */
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Lato";
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*.active {
+  color: theme("colors.green");
+}*/
+
+.title {
+  font-family: "Playfair Display";
+  font-weight: 700;
+}
+
+.category-title {
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content-normal {
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.content-bold {
+  font-family: "Lato";
+  font-weight: 700;
+  font-style: bold;
+}
+
+.content-italic {
+  font-family: "Lato";
+  font-weight: 400;
+  font-style: italic;
+}
+
+.content-bolditalic {
+  font-family: "Lato";
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Headings */
+.style-1:before {
+  content: "";
+  height: 3px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid theme("colors.grey.400");
+  position: absolute;
+  width: 300%;
+  top: 50%;
+  left: -100%;
+  z-index: -999;
+}
+
+/* .style-2:before {
+  content: "";
+  height: 6px;
+  border-top: 2px dotted black;
+  border-bottom: 2px dotted black;
+  position: absolute;
+  width: 200%;
+  top: 45%;
+  left: -50%;
+  z-index: -999;
+} */
+
+.divider {
+  display: flex;
+}
+
+.divider:before,
+.divider:after {
+  content: "";
+  flex: 1;
+}
+
+.line {
+  align-items: center;
+  margin: 0.5em 0.5em;
+}
+
+.line:before,
+.line:after {
+  height: 1px;
+  margin: 0 1rem;
+}
+
+.razor:before,
+.razor:after {
+  box-shadow: 0 1px 0 black;
+}
+
+.vertical-label {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  writing-mode: tb-rl;
+  transform: rotate(-180deg);
+}
+
+.post-container p {
+  font-family: "Merriweather";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 2.25rem;
+  margin-bottom: 1.8725rem;
+  color: #292929;
+}
+
+.post-container p a {
+  font-family: "Merriweather";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 2.25rem;
+  text-align: left;
+  /* color: #7673e6; */
+  text-decoration: underline;
+}
+
+.post-container p strong {
+  font-family: "Merriweather";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 2.25rem;
+  color: #292929;
+}
+
+.post-container p em {
+  font-family: "Merriweather";
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.post-container h3 {
+  font-family: "Playfair Display";
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  margin-bottom: 0.25rem;
+  color: #292929;
+}
+
+.post-container blockquote {
+  background-color: #d7d4d0;
+  border-radius: 0px 0.5rem 0.5rem 0px;
+  border-left: 0.5rem solid #7673e6;
+  padding: 1.5rem 3.5rem 0.75rem 4rem;
+  margin: 0 0 1.8725rem 0;
+}
+
+.post-container blockquote p {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 2.25rem;
+  background-color: #d7d4d0;
+  font-family: "Playfair Display";
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-align: left;
+  margin-bottom: 0.25rem;
+}
+
+.post-container blockquote p:last-child {
+  font-style: italic;
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.post-container ul {
+  font-family: "Merriweather";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 2.25rem;
+  letter-spacing: 0em;
+  text-align: left;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 1.8725rem;
+}
+
+.post-container ul li:first-child {
+  margin: 0rem 0 0.75rem 1rem;
+}
+
+.post-container ul li:last-child {
+  margin: 0 0 0rem 1rem;
+}
+
+.post-container ul li {
+  margin: 0rem 0 0.75rem 1rem;
+}
+
+.post-container ol {
+  font-family: "Merriweather";
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.2rem;
+  line-height: 2.25rem;
+  letter-spacing: 0em;
+  text-align: left;
+  list-style-type: decimal;
+  list-style-position: inside;
+  margin-bottom: 1.8725rem;
+}
+
+.post-container ol li:first-child {
+  margin: 0rem 0 0.75rem 1rem;
+}
+
+.post-container ol li:last-child {
+  margin: 0 0 0rem 1rem;
+}
+
+.post-container ol li {
+  margin: 0rem 0 0.75rem 1rem;
+}
+
+@media only screen and (max-width: 640px) {
+  .post-container p {
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #292929;
+  }
+
+  .post-container p a {
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    /* color: #7673e6; */
+    text-decoration: underline;
+  }
+
+  .post-container p strong {
+    font-family: "Merriweather";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    /* margin-bottom: 1.8725rem; */
+    color: #292929;
+  }
+
+  .post-container p em {
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: 2.25rem;
+    margin-bottom: 1.8725rem;
+    color: #292929;
+  }
+
+  .post-container h3 {
+    font-family: "Playfair Display";
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.35rem;
+    line-height: 2rem;
+    margin-bottom: 0.25rem;
+    color: #292929;
+  }
+
+  .post-container blockquote {
+    background-color: #e1dcd5;
+    border-radius: 0px 0.5rem 0.5rem 0px;
+    border-left: 0.5rem solid #7673e6;
+    padding: 1.5rem 1.5rem 0.75rem 1.5rem;
+    margin: 0 0 1.5rem 0;
+  }
+
+  .post-container blockquote p {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    background-color: #e1dcd5;
+    font-family: "Lato";
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-align: left;
+    margin-bottom: 0.25rem;
+  }
+
+  .post-container blockquote p:last-child {
+    font-style: normal;
+    font-family: "Playfair Display";
+    font-weight: 400;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .post-container ul {
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0em;
+    text-align: left;
+    list-style-type: disc;
+    list-style-position: inside;
+  }
+
+  .post-container ul li:first-child {
+    margin: 0rem 0 0.75rem 1rem;
+  }
+
+  .post-container ul li:last-child {
+    margin: 0 0 0rem 1rem;
+  }
+
+  .post-container ul li {
+    margin: 0rem 0 0.75rem 1rem;
+  }
+
+  .post-container ol {
+    font-family: "Merriweather";
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1rem;
+    line-height: 1.75rem;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0em;
+    text-align: left;
+    list-style-type: decimal;
+    list-style-position: inside;
+  }
+
+  .post-container ol li:first-child {
+    margin: 0rem 0 0.75rem 1rem;
+  }
+
+  .post-container ol li:last-child {
+    margin: 0 0 0rem 1rem;
+  }
+
+  .post-container ol li {
+    margin: 0rem 0 0.75rem 1rem;
+  }
+}
