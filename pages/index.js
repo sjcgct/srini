@@ -14,6 +14,7 @@ import styles from "../styles/Home.module.css";
 export default function Home({ stories, hogs, alumspace }) {
   return (
     <div className={styles.container}>
+      
       <main className={styles.main}>
         <RecentStories stories={stories} />
         <HumansOfGct hogs={hogs} />

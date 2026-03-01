@@ -211,20 +211,19 @@ function Nav() {
                 link.href === "/"
                   ? router.pathname === "/"
                   : router.pathname === link.href;
-
-              if (link.href.startsWith("http")) {
-                return (
-                  <a
-                    key={link.name}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block w-full text-center px-4 py-2 rounded-full bg-white text-gray-700 shadow-sm transition-colors duration-200"
-                  >
-                    {link.name}
-                  </a>
-                );
-              }
+            if (link.href.startsWith("http")) {
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center px-4 py-2 rounded-full bg-gray-200 text-gray-700 hover:bg-white hover:shadow-sm transition-colors duration-200"
+                >
+                  {link.name}
+                </a>
+              );
+            }
 
               return (
                 <Link key={link.name} href={link.href}>
