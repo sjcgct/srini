@@ -20,7 +20,7 @@ export default function AlumspaceDetail({ page }) {
   // Handle both string and Link type fields
   const websiteRaw = page.data.website;
   const website = websiteRaw?.url || (typeof websiteRaw === "string" && websiteRaw) || null;
-  
+
 
   return (
     <div className="bg-white dark:bg-grey-800">
@@ -108,7 +108,7 @@ export default function AlumspaceDetail({ page }) {
 export async function getStaticProps({ params }) {
   try {
     const page = await client.getByUID("alumspace", params.uid);
-    
+
     if (!page) {
       return {
         notFound: true,
@@ -132,7 +132,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   try {
     const pages = await client.getAllByType("alumspace");
-    
+
     return {
       paths: pages
         .filter(item => item && item.uid)
@@ -141,13 +141,13 @@ export async function getStaticPaths() {
             uid: item.uid,
           },
         })),
-      fallback: false,
+      fallback: 'blocking',
     };
   } catch (error) {
     console.error("Error in getStaticPaths:", error);
     return {
       paths: [],
-      fallback: false,
+      fallback: 'blocking',
     };
   }
 }

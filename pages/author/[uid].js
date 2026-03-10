@@ -11,10 +11,10 @@ const truncateWords = (text, maxWords = 20) => {
 };
 
 export default function AuthorPage({ author, stories }) {
-  if(!author || !author.data){
+  if (!author || !author.data) {
     return <div>Not Found</div>
   }
-  stories = stories|| [];
+  stories = stories || [];
   return (
     <Canvas bgcolor="white">
       <div className="max-w-4xl mx-auto px-6 py-10">
@@ -140,7 +140,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   try {
     const pages = await client.getAllByType("author");
-    
+
     return {
       paths: pages
         .filter(item => item && item.uid)
@@ -149,13 +149,13 @@ export async function getStaticPaths() {
             uid: item.uid,
           },
         })),
-      fallback: false,
+      fallback: 'blocking',
     };
   } catch (error) {
     console.error("Error in getStaticPaths:", error);
     return {
       paths: [],
-      fallback: false,
+      fallback: 'blocking',
     };
   }
 }

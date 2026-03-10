@@ -8,10 +8,10 @@ import { components } from "../../slices";
 import Link from "next/link";
 
 export default function HogStory({ page, otherStories }) {
-  if(!page || !page.data){
+  if (!page || !page.data) {
     return <div>Not Found</div>
   }
-  otherStories = otherStories|| [];
+  otherStories = otherStories || [];
   return (
     <div className="bg-white dark:bg-grey-800 grid-col-1 align-center justify-center px-2 py-1">
       <article>
@@ -46,22 +46,22 @@ export default function HogStory({ page, otherStories }) {
           </figure>
         </div>
         <div className="w-full mx-auto max-w-2xl px-1 py-8 md:pt-14 text-base text-gray-800 dark:text-gray-200 post-container">
-  <PrismicRichText
-    field={page.data.story}
-    components={{
-      paragraph: ({ children }) => (
-        <p className="mb-4 text-base dark:text-white">
-          {children}
-        </p>
-      ),
-      heading2: ({ children }) => (
-        <h2 className="text-2xl font-bold mt-8 mb-4 text-base dark:text-white">
-          {children}
-        </h2>
-      ),
-    }}
-  />
-</div>
+          <PrismicRichText
+            field={page.data.story}
+            components={{
+              paragraph: ({ children }) => (
+                <p className="mb-4 text-base dark:text-white">
+                  {children}
+                </p>
+              ),
+              heading2: ({ children }) => (
+                <h2 className="text-2xl font-bold mt-8 mb-4 text-base dark:text-white">
+                  {children}
+                </h2>
+              ),
+            }}
+          />
+        </div>
       </article>
 
       <div className="flex flex-col justify-center w-full mx-auto md:max-w-3xl lg:max-w-5xl mx-auto pt-8 pb-6">
@@ -111,7 +111,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   try {
     const pages = await client.getAllByType("hog");
-    
+
     return {
       paths: pages
         .filter(item => item && item.uid)
@@ -120,13 +120,13 @@ export async function getStaticPaths() {
             uid: item.uid,
           },
         })),
-      fallback: false,
+      fallback: 'blocking',
     };
   } catch (error) {
     console.error("Error in getStaticPaths:", error);
     return {
       paths: [],
-      fallback: false,
+      fallback: 'blocking',
     };
   }
 }

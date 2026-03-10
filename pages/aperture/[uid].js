@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function ApertureDetail({ page }) {
 
-  if (!page || !page.data){
+  if (!page || !page.data) {
     return <div> Not Found</div>
   }
   const title = page.data.title;
@@ -80,7 +80,7 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   try {
     const pages = await client.getAllByType("apertures");
-    
+
     return {
       paths: pages
         .filter(item => item && item.uid) // Ensure item and uid exist
@@ -89,13 +89,13 @@ export async function getStaticPaths() {
             uid: item.uid,
           },
         })),
-      fallback: false,
+      fallback: 'blocking',
     };
   } catch (error) {
     console.error("Error in getStaticPaths for aperture:", error);
     return {
       paths: [],
-      fallback: false,
+      fallback: 'blocking',
     };
   }
 }

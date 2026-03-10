@@ -172,6 +172,7 @@ export async function getStaticProps({ params }) {
       disclaimer,
       otherStories: otherStories.results,
     },
+    revalidate: 60,
   };
 }
 
@@ -192,6 +193,6 @@ export async function getStaticPaths() {
         },
       };
     }),
-    fallback: false,
+    fallback: 'blocking',
   };
 }

@@ -99,7 +99,7 @@ export async function getStaticPaths() {
     paths: teams.map((team) => ({
       params: { uid: team.uid },
     })),
-    fallback: false,
+    fallback: 'blocking',
   };
 }
 
@@ -112,5 +112,6 @@ export async function getStaticProps({ params }) {
       team,
       allTeams,
     },
+    revalidate: 60,
   };
 }
